@@ -10,6 +10,7 @@
 
 .gallery-image {
   width: 360px;
+  transition: width 200ms ease-in-out;
 }
 
 .gallery-image:hover {
