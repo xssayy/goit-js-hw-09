@@ -1,0 +1,17 @@
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px 24px;
+  max-width: 1200px;
+  margin: 150px auto 0;
+}
+
+.gallery-image {
+  width: 360px;
+}
+
+.gallery-image:hover {
+  width: 376px;
+}
