@@ -50,8 +50,8 @@ function loadFromLS(key) {
 
 function checkout() {
   const userData = loadFromLS(LS_KEY) || {};
-  form.elements.email.value = userData.email;
-  form.elements.message.value = userData.message;
+  form.elements.email.value = userData.email || '';
+  form.elements.message.value = userData.message || '';
 }
 
 checkout();
