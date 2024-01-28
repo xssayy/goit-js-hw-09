@@ -12,15 +12,19 @@ const LS_KEY = 'feedback-form-state';
 function onSubmit(event) {
   event.preventDefault();
 
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
+  if (!email || !message) {
+    alert('Будь ласка, заповніть усі поля');
+    return;
+  }
   const data = {
     email,
     message,
   };
 
   console.log(data);
-  localStorage.removeItem(LS_KEY, data);
+  localStorage.removeItem(LS_KEY);
   form.reset();
 }
 
